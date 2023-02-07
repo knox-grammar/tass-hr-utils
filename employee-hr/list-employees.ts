@@ -58,7 +58,10 @@ export async function main(): Promise<void> {
 
   if (response) {
     console.log('Employee count:', response.employees.length)
-    console.log('first employee', response.employees[0])
+    console.log(
+      'First employee:',
+      `${response.employees[0].general.surname}, ${response.employees[0].general.given_names}`
+    )
   }
 }
 
